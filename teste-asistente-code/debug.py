@@ -21,9 +21,11 @@ imposto = subtotal * 0.10
 
 # DESCONTO
 desconto_cupom = float(input("Você tem um cupom de desconto? (Digite o percentual ou 0): "))
+# Converte o percentual informado em um valor monetário relativo ao subtotal.
 desconto = subtotal * (desconto_cupom / 100)
 
 # TOTAL FINAL
+# Aplica imposto ao subtotal e, em seguida, subtrai o desconto calculado.
 total = subtotal + imposto - desconto
 
 # EXIBIÇÃO
@@ -40,6 +42,7 @@ print(separador)
 print(f" Subtotal:      R$ {subtotal:.2f}")
 print(f" Imposto (10%): R$ {imposto:.2f}")
 
+# Exibe o desconto somente quando o cupom for maior que zero.
 if desconto_cupom > 0:
     print(f" Desconto ({desconto_cupom:.0f}%): -R$ {desconto:.2f}")
 
